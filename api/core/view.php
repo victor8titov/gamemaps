@@ -10,7 +10,6 @@ class View
 	function response($data, $status = 500) {
 		header("HTTP/1.1 " . $status . " " . $this->requestStatus($status));
 		header("Content-Type: application/json");
-		header('Content-Length: ' . 100);
 		return json_encode($data);
 	}
 
