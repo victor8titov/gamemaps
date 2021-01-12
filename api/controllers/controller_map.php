@@ -6,7 +6,6 @@ class Controller_map extends Controller {
     $this->model = new Model_map();
     $this->view = new View();
   }
-  
 
   function getAction($options) {
     $id = $options[0];
@@ -18,13 +17,5 @@ class Controller_map extends Controller {
     } else {
       $this->view->response('', 404);
     }
-  }
-
-  function createAction($arg) {
-    $data = [
-      "x" => 10,
-      "y" => 10,
-    ];
-    $this->view->response($data, 200);
   }
 }
